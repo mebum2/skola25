@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="module" src="js/main.js" defer></script>
+
+        <title>Custom Skola24 Calendars</title>
+    </head>
+    <body>
+        <main class="questionair">
+            <h1 class="questionair--title">Tailor your custom Skola24 Calendar</h1>
+
+            <form class="questionar--form calendar_form">
+                <div class="calendar_form--option config--city">
+                    <label id="city_label" class="calendar_form--label" for="city_name"
+                        >Municipality / City</label
+                    >
+                    <input
+                        class="calendar_form--input"
+                        type="text"
+                        name="city_name"
+                        id="city_name"
+                        placeholder="Halmstad"
+                        value="Halmstad"
+                    />
+                </div>
+                <div class="calendar_form--option config--school">
+                    <label
+                        id="school_name_label"
+                        class="calendar_form--label"
+                        for="school_name"
+                        >School name</label
+                    >
+                    <input
+                        class="calendar_form--input"
+                        type="text"
+                        name="school_name"
+                        id="school_name"
+                        placeholder="Kattegattgymnasiet"
+                        value="Kattegattgymnasiet"
+                    />
+                </div>
+                <div class="calendar_form--option config--schedule_id">
+                    <label
+                        id="schedule_id_label"
+                        class="calendar_form--label"
+                        for="schedule_id"
+                        >Schedule ID
+
+                        <button
+                            class="questionmark"
+                            type="button"
+                            id="schedule_id__reveal"
+                        >
+                            <img
+                                class="questionmark--img"
+                                src="assets/icons/16056-question-mark-button.svg"
+                                alt=""
+                            />
+                        </button>
+                    </label>
+                    <input
+                        class="calendar_form--input"
+                        type="text"
+                        name="schedule_id"
+                        id="schedule_id"
+                        placeholder="YYMMDD-XXXX or click the questionmark?"
+                    />
+                    <ul class="calendar_form--list -display_none" id="schedule_id_info">
+                        <li>
+                            Person ID<br />
+                            <p class="calendar_form--item_description">
+                                Swedish social security number (YYMMDD-XXXX)
+                            </p>
+                        </li>
+                        <li>Class ID</li>
+                        <li>Classroom ID</li>
+                        <li>Teacher ID</li>
+                        <li>Group ID</li>
+                        <li>Lesson ID</li>
+                        <li>or Multiple, comma seperated</li>
+                    </ul>
+                </div>
+
+                <div class="calendar_form--option config--week_number">
+                    <label
+                        id="week_number_label"
+                        class="calendar_form--label"
+                        for="week_number"
+                        >Week number</label
+                    >
+                    <input
+                        class="calendar_form--input"
+                        type="number"
+                        name="week_number"
+                        id="week_number"
+                    />
+                </div>
+
+                <div class="calendar_form--download">
+                    <button
+                        id="download_button"
+                        class="calendar_form--submit"
+                        type="submit"
+                    >
+                        Create Calendar
+                    </button>
+                    <div class="-display_none" id="download_info">
+                        <p>
+                            Download will begin in about a minute.
+                            <b>Please do not reload the page</b>
+                        </p>
+                        <p>
+                            Our server has started webcraping your skola24 schedule to
+                            create your calendar
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    class="calendar_form--reset text_button -display_none"
+                    id="next_calendar"
+                    type="button"
+                >
+                    Create another custom calendar
+                </button>
+            </form>
+        </main>
+    </body>
+</html>

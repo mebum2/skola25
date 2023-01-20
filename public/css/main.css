@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* + * {
+  margin-top: 1rem;
+}
+
+html,
+body {
+  background: #171717;
+  color: #ddd;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  max-width: 380px;
+  margin: calc(6vw - 0.06 * 380px) auto;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.text_button {
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.questionair {
+  padding: 0.9rem 1.2rem;
+  background: #232323;
+  border: 3px solid #202020;
+  border-radius: 8px;
+}
+
+.questionair--title {
+  font-size: 1.5rem;
+}
+@media (max-width: 319px) {
+  .questionair--title {
+    font-size: 1.3rem;
+  }
+}
+
+.calendar_form--option {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar_form--input {
+  margin-top: 0.2rem;
+  padding: 0.7rem 0.5rem;
+  background: #1d1d1d;
+  color: #eee;
+  border: 2px solid #1b1b1b;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+.calendar_form--input:disabled {
+  background: #1f1f1f;
+  color: #d0c3d0;
+  border: none;
+}
+
+.calendar_form--list {
+  margin: 0.4rem 1.1rem;
+}
+.calendar_form--list li {
+  margin-top: 0.4rem;
+}
+
+.calendar_form--item_description {
+  margin-top: 0;
+}
+
+.questionmark--img {
+  width: 0.8rem;
+  height: 0.8rem;
+  filter: invert(100);
+}
+
+.calendar_form--submit {
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 1.2rem;
+  background: #1b1b1b;
+  color: #eee;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+.calendar_form--submit:hover {
+  background: #1a1a1a;
+}
+.calendar_form--submit:focus {
+  background: #171717;
+}
+.calendar_form--submit:active {
+  background: #131313;
+}
+.calendar_form--submit:disabled {
+  display: none;
+}
+
+.calendar_form--reset {
+  color: #737373;
+}
+
+.-low_opacity {
+  opacity: 30%;
+}
+
+.-hidden {
+  visibility: hidden;
+}
+
+.-display_none {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
