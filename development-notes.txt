@@ -1,0 +1,147 @@
+# User Interface
+
+## DOM elements
+
+Text input
+    Label: Municipality / City
+    Placeholder: Halmstad
+    Defualt value: Halmstad
+    Input text modification
+        lower case
+        Convert åäö to aao
+
+Text input
+    Label: School
+    Placeholder: Kattegattgymnasiet
+    Defualt value: Kattegattgymnasiet
+    Input text modification
+        Capital case
+        Convert åäö to aao
+
+Text input
+    Label: Schedule ID 
+    Placeholder: YYMMDD-XXXX
+    Defualt value: ""
+
+Information paragraph
+    Text: 
+        Schedule ID information
+        Person ID 
+            Swedish social security number (YYMMDD-XXXX)
+        Class ID
+        Classroom ID
+        Teacher ID
+        Group ID
+        Lesson ID
+
+Number input
+    Label: Week number
+    Default value: {Current week}
+    Information paragraph
+        Text: This week will be used as schedule model for following weeks
+
+Number input
+    Label: Repeat up till week number
+    Default value: {Current week + 1}
+
+Information box
+    Recommended to choose to repeat until the last week before a break
+
+Header
+    Text: Schedule block formatting
+    Button
+        Function: Unvail group box below
+
+Group box (hidden)
+
+    Information paragraph
+    Text:
+        Will be replaced by value for each schedule block
+        (class) = Class ID
+        (classroom) = Classroom ID
+        (teacher) = Teacher ID
+
+    Text input
+    Label: Title
+    Placeholder: (teacher) - (class)
+    Default value: (teacher) - (class)
+
+    Text input
+    Label: Location
+    Placeholder: (classroom)
+    Default value: (classroom)
+
+    Text input
+    Label: Description
+    Placeholder: 
+    Default value: 
+
+    Information box
+    Heading: 
+        Example using above
+    Text:
+        Title: PEFR - Webbutveckling
+        Location: E212
+        Description: 
+
+Header
+    Text: Reminders
+    Button
+        Function: Unvail group box below
+
+Group box (hidden)
+
+    Number input
+    Label: Default reminders
+    Default value: 10
+        Button
+            Add another number input
+        
+        Button
+            Remove number input
+
+    Checklist with input numbers
+    Label: Special reminders
+    Cleckbox
+        Label: First event of day reminder
+        Text input
+            Label: Description
+            Placeholder: 
+            Default value: 
+
+        
+
+## DOM features
+
+Text input Functionality
+    Mandatory
+    Sanitize inputs
+    Simple valid input checks
+        3 or more letters (everything is at least, except week number)
+        If Schedule ID first 5 chars are numbers check if valid Person ID
+    Apply case
+
+Cannot submit the button twice, show when that users turn
+
+
+## Progress
+
+Implement all visually, disable the ones with no working functionality
+
+
+### Future ideas
+
+If break longer than 60 min add e.g 30 min reminder
+
+Calender to select weeks or even specific dates
+    Visual calendar with possible text input, clear start and end date selection
+
+Scrape entire period selected
+
+Set found reoccuring events to repeat and remove events not found one week i.e a break
+
+
+
+# Known issues
+
+When calender imported to google calendar and opening to edit event, then the time is two hours ahead of actual placement on the calendar. This probably is because of no timezone set by _calendar_formatted_string.js_
